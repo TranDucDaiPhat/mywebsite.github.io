@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+
+      .form-control::-webkit-input-placeholder{
+        color: rgb(151, 150, 150);
+      }
+
+    </style>
+
+    <script src="../js/Validation.js"></script>
+</head>
+<body>
+    <div class="container border border-dark mt-2 mb-2" style="box-shadow: 2px 2px 4px gray; width: 700px;">
+      <div class="row mt-2 mb-3">
+        <div class="col text-center">
+          <h3 style="font-weight: bolder;">ĐĂNG KÝ TÀI KHOẢN</h3>
+        </div>
+      </div>
+      <div class="row m-2">
+        <div class="col-sm-4 text-right">
+          <label for="">Tên đăng nhập:</label>
+        </div>
+        <div class="col-sm-5">
+          <input type="text" onblur="return KiemTraTenDN();" id="DangNhap" class="form-control" placeholder="Nhập vào tên đăng nhập">
+        </div>
+        <div class="col-sm-3">
+          <span id="check1" class="text-danger">*</span>
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <div class="col-sm-4 text-right">
+          <label for="">Mật khẩu:</label>
+        </div>
+        <div class="col-sm-5">
+          <input type="password" onblur="return KiemTraMatKhau();" id="MatKhau" class="form-control" placeholder="Nhập vào mật khẩu">
+        </div>
+        <div class="col-sm-3">
+          <label for="" id="check2" class="text-danger">*</label>
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <div class="col-sm-4 text-right">
+          <label for="">Nhập lại mật khẩu:</label>
+        </div>
+        <div class="col-sm-5">
+          <input type="password" onblur="return NhapLaiMatKhau();" id="NhapLaiMK" class="form-control" placeholder="Nhập vào xác nhận mật khẩu">
+        </div>
+        <div class="col-sm-3">
+          <span id="check3" class="text-danger">*</span>
+          
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">
+        <div class="col text-center">
+          <h5 style="font-weight: bolder;">THÔNG TIN CÁ NHÂN</h5>
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <div class="col-sm-4 text-right">
+          <label for="">Họ và tên:</label>
+        </div>
+        <div class="col-sm-5">
+          <input type="text" onblur="return KiemTraHoTen();" id="hoten" class="form-control" placeholder="Nhập họ và tên (bắt buộc)">
+        </div>
+        <div class="col-sm-3">
+          <label for="" id="check4" class="text-danger">*</label>
+        </div>
+      </div>
+      
+      <div class="row m-2">
+        <div class="col-sm-4 text-right">
+          <label for="">Ngày sinh:</label>
+        </div>
+        <div class="col-sm-3 text-left">
+          <input type="date" id="ngaysinh" onblur="return KiemTraNgaySinh(check5,'ngaysinh');">
+        </div>
+        <div class="col-sm-5 text-left">
+          <span id="check5" class="text-danger"></span>
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <div class="col-sm-4 text-right">
+          <label for="">Giới tính:</label>
+        </div>
+        <div class="col-sm-8 text-left">
+          <input type="radio" id="nam" name="gioitinh">
+          <label for="">Nam</label>
+          <input type="radio" id="nu" name="gioitinh">
+          <label for="">Nữ</label>
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <div class="col-sm-4 text-right">
+          <label for="">Địa chỉ:</label>
+        </div>
+        <div class="col-sm-7">
+          <input type="text" id="diachi" class="form-control" placeholder="Nhập vào địa chỉ">
+        </div>
+        
+      </div>
+
+      <div class="row m-2">
+        <div class="col-sm-4 text-right">
+          <label for="">Điện thoại:</label>
+        </div>
+        <div class="col-sm-7">
+          <input type="text" id="dienthoai" class="form-control" placeholder="Nhập vào số điện thoại(9-10 số)">
+        </div>
+      </div>
+
+      <div class="row m-2">
+        <div class="col-sm-4 text-right">
+          <label for="">Email:</label>
+        </div>
+        <div class="col-sm-7">
+          <input type="text" id="email" class="form-control" placeholder="Nhập email theo dạng ten@tencongty.com">
+        </div>
+      </div>
+      <hr>
+      <div class="row m-2">
+        <div class="col text-center">
+          <button onclick="return SubmitForm();" class="btn btn-dark mr-3" id="btnDK">Đăng ký</button>
+          <button class="btn btn-dark" id="btnHuy">Huỷ</button>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
