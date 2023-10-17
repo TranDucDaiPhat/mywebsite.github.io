@@ -112,7 +112,7 @@
         <div class="col-sm-4 text-right">
           <label for="">Địa chỉ:</label>
         </div>
-        <div class="col-sm-7">
+        <div class="col-sm-5">
           <input type="text" id="diachi" class="form-control" placeholder="Nhập vào địa chỉ">
         </div>
         
@@ -122,8 +122,11 @@
         <div class="col-sm-4 text-right">
           <label for="">Điện thoại:</label>
         </div>
-        <div class="col-sm-7">
-          <input type="text" id="dienthoai" class="form-control" placeholder="Nhập vào số điện thoại(9-10 số)">
+        <div class="col-sm-5">
+          <input onblur="return KiemTraSDT();" type="text" id="dienthoai" class="form-control" placeholder="Nhập SĐT">
+        </div>
+        <div class="col-sm-3 text-left">
+          <span id="check6" class="text-danger"></span>
         </div>
       </div>
 
@@ -131,8 +134,11 @@
         <div class="col-sm-4 text-right">
           <label for="">Email:</label>
         </div>
-        <div class="col-sm-7">
-          <input type="text" id="email" class="form-control" placeholder="Nhập email theo dạng ten@tencongty.com">
+        <div class="col-sm-5">
+          <input onblur="return KiemTraEmail();" type="text" id="email" class="form-control" placeholder="Vd: ten@tencongty.com">
+        </div>
+        <div class="col-sm-3 text-left">
+          <span id="check7" class="text-danger"></span>
         </div>
       </div>
       <hr>
